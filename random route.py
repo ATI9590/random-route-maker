@@ -56,6 +56,13 @@ if value == 1 or value == 8:
                         print("Répcelak")
                     if value6 == 3:
                         print("Szombathely")
+                        value7 = randint(1,3)
+                        if value7 == 1:
+                            print("87")
+                            print("Kőszeg")
+                        if value7 == 2:
+                            print("89")
+                            print("Torony")
                     if value6 == 4:
                         print("Körmend")
                     if value6 == 5:
@@ -70,10 +77,17 @@ if value == 1 or value == 8:
                 print("Sopron")
     if value2 == 4:
         print("Mosonmagyaróvár")
-        value3 = randint(1,2)
+        value3 = randint(1,3)
         if value3 == 1:
             print("15")
             print("Rajka")
+        if value3 == 2:
+            print("86")
+            value4 = randint(1,2)
+            if value4 == 1:
+                print("Jánossomorja")
+            if value4 == 2:
+                print("Csorna")
     if value2 == 5:
         print("Hegyeshalom")
 
@@ -566,12 +580,37 @@ if value == 7 or value == 14:
                 value5 = randint(1,4)
                 if value5 == 1:
                     print("82")
+                    value4 = randint(1,4)
+                    if value4 == 1:
+                        print("Zirc")
+                    if value4 == 2:
+                        print("Veszprémvarsány")
+                    if value4 == 3:
+                        print("Pannonhalma")
+                    if value4 == 4:
+                        print("Győr")
                 if value5 == 2:
                     print("73")
+                    print("Csopak")
                 if value5 == 3:
                     print("77")
+                    value6 = randint(1,2)
+                    if value6 == 1:
+                        print("Nagyvázsony")
+                    if value6 == 2:
+                        print("Tapolca")
             if value4 == 2:
                 print("Városlőd")
+                value5 = randint(1,2)
+                if value5 == 1:
+                    print("83")
+                    value6 = randint(1,3)
+                    if value6 == 1:
+                        print("Pápa")
+                    if value6 == 2:
+                        print("Tét")
+                    if value6 == 3:
+                        print("Győr")
             if value4 == 3:
                 print("Jánosháza")
             if value4 == 4:
@@ -582,6 +621,15 @@ if value == 7 or value == 14:
                 print("Rábafüzes")
         if value3 == 4:
             print("81")
+            value4 = randint(1,4)
+            if value4 == 1:
+                print("Mór")
+            if value4 == 2:
+                print("Kisbér")
+            if value4 == 3:
+                print("Pér")
+            if value4 == 4:
+                print("Győr")
     if value2 == 4:
         print("Lepsény")
         value3 = randint(1,3)
@@ -639,17 +687,124 @@ if value == 7 or value == 14:
                 print("Szekszárd")
     if value2 == 6:
         print("Balatonszemes")
-        # 67; Mernye, Kaposvár, Szentlászló, Szigetvár
+        value3 = randint(1,2)
+        if value3 == 1:
+            print("67")
+            value4 = randint(1,4)
+            if value4 == 1:
+                print("Mernye")
+            if value4 == 2:
+                print("Kaposvár")
+            if value4 == 3:
+                print("Szentlászló")
+            if value4 == 4:
+                print("Szigetvár")
     if value2 == 7:
         print("Fonyód")
     if value2 == 8:
         print("Balatonkeresztúr")
-        # 68; Marcali, Böhönye, Nagyatád, Barcs
-        # 76; Sármellék, Zalacsány, Zalaegerszeg, Nádasd
+        value3 = randint(1,3)
+        if value3 == 1:
+            print("68")
+            value4 = randint(1,4)
+            if value4 == 1:
+                print("Marcali")
+            if value4 == 2:
+                print("Böhönye")
+            if value4 == 3:
+                print("Nagyatád")
+            if value4 == 4:
+                print("Barcs")
+        if value3 == 2:
+            print("76")
+            value4 = randint(1,4)
+            if value4 == 1:
+                print("Sármellék")
+            if value4 == 2:
+                print("Zalacsány")
+            if value4 == 3:
+                print("Zalaegerszeg")
+            if value4 == 4:
+                print("Nádasd")
     if value2 == 9:
         print("Sávoly")
     if value2 == 10:
         print("Nagykanizsa")
-        # 74; Bak, Zalaegerszeg, Vasvár
+        value3 = randint(1,2)
+        if value3 == 1:
+            print("74")
+            value4 = randint(1,3)
+            if value4 == 1:
+                print("Bak")
+            if value4 == 2:
+                print("Zalaegerszeg")
+            if value4 == 3:
+                print("Vasvár")
     if value2 == 11:
         print("Letenye")
+
+# 10-es út
+if value == 10:
+    value2 = randint(1,4)
+    if value2 == 1:
+        print("Pilisvörösvár")
+    if value2 == 2:
+        print("Dorog")
+    if value2 == 3:
+        print("Nyergesújfalu")
+    if value2 == 4:
+        print("Almásfüzitő")
+
+# 11-es út
+if value == 11:
+    value2 = randint(1,3)
+    if value2 == 1:
+        print("Szentendre")
+    if value2 == 2:
+        print("Visegrád")
+    if value2 == 3:
+        print("Esztergom")
+
+# 31-es út
+if value == 15:
+    value2 = randint(1,6)
+    if value2 == 1:
+        print("Sülysáp")
+    if value2 == 2:
+        print("Nagykáta")
+    if value2 == 3:
+        print("Jászberény")
+    if value2 == 4:
+        print("Jászapáti")
+    if value2 == 5:
+        print("Heves")
+    if value2 == 6:
+        print("Dormánd")
+
+# 51-es út
+if value == 16:
+    value2 = randint(1,6)
+    if value2 == 1:
+        print("Kiskunlacháza")
+    if value2 == 2:
+        print("Tass")
+    if value2 == 3:
+        print("Solt")
+        value3 = randint(1,2)
+        if value3 == 1:
+            print("53")
+            value4 = randint(1,4)
+            if value4 == 1:
+                print("Kiskőrös")
+            if value4 == 2:
+                print("Soltvadkert")
+            if value4 == 3:
+                print("Kiskunhalas")
+            if value4 == 4:
+                print("Tompa")
+    if value2 == 4:
+        print("Kalocsa")
+    if value2 == 5:
+        print("Baja")
+    if value2 == 6:
+        print("Hercegszántó")
