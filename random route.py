@@ -245,7 +245,13 @@ if value == 9:
     if value2 == 3:
         print("Nyékládháza")
         print("M30")
-        print("Miskolc")
+        value3 = randint(1,3)
+        if value3 == 1:
+            print("Miskolc")
+        if value3 == 2:
+            print("Encs")
+        if value3 == 3:
+            print("Tornyosnémeti")
     if value2 == 4:
         print("Görbeháza")
         print("M35")
