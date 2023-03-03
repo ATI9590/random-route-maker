@@ -16,4 +16,4 @@ elágazás
 általa érintett település
 ```
 
-Az utak és a települések sorrendje nem fontos.
+Az utak és a települések sorrendje nem befolyásolja a program működését.
