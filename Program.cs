@@ -1,57 +1,54 @@
-﻿namespace Random_Route_new
+namespace Random_Route_new
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            string nyers = File.ReadAllText("source.txt");
-            string[] nyers2 = nyers.Split("\n\n");
-            string[] index = new string[nyers2.Length];   //a város-út tömb indexeinek listája
-            string[] name = new string[101 * (nyers2.Length)];  //a város-út tömb városainak/útjainak listája, olyan módon, hogy ((index * 100) + város/út sorszáma)
-            int x = 0;
-            for (int i = 0; i < nyers2.Length; i++)
+            string be = File.ReadAllText("source.txt");
+            string[] be2 = be.Split("\n\n");
+            string[,] tömb = new string[be2.Length, 101 * be2.Length];
+            for (int i = 0; i < be2.Length; i++)
             {
-                string[] splitted = nyers2[i].Split("\n");
-                index[i] = splitted[0];
+                string[] splitted = be2[i].Split("\n");
+                tömb[0,i] = splitted[0];
                 for (int j = 1; j < splitted.Length; j++)
                 {
-                    name[(100*i)+x] = splitted[j];
-                    x++;
+                    tömb[1,(100*i)+(j-1)] = splitted[j];
                 }
-                x = 0;
             }
             Console.Write("Állomások száma: ");
             int állomás = Convert.ToInt32(Console.ReadLine());
             Console.Write("Induló település: ");
             string aktuális = Console.ReadLine();
             int aktid = 0;
-            for (int i = 0; i < index.Length; i++)  //az induló település indexének id-jét az "aktid"-be menti
+            for (int i = 0; i < tömb.GetLength(0); i++)  //az induló település indexének id-jét az "aktid"-be menti
             {
-                if (index[i] == aktuális)
+                if (tömb[0,i] == aktuális)
                 {
                     aktid = i;
-                    Console.WriteLine(index[i]);
+                    Console.WriteLine(tömb[0,i]);
                 }
             }
             Random rnd = new Random();
+            int x = 0;
             for (int i = 1; i <= állomás; i++)
             {
                 for (int j = 100*aktid; j < 100*(aktid+1); j++) //megnézi, mennyi út vagy város van az adott index alatt
                 {
-                    if (name[j] == null)
+                    if (tömb[1,j] == null)
                     {
                         x = j - (100 * aktid);
                         break;
                     }
                 }
                 int y = rnd.Next(x);
-                aktuális = name[(100 * aktid) + y];
+                aktuális = tömb[1,(100 * aktid) + y];
                 if (aktuális == null)
                     break;
                 Console.WriteLine(aktuális);
-                for (int j = 0; j < index.Length; j++)
+                for (int j = 0; j < tömb.GetLength(0); j++)
                 {
-                    if (index[j] == aktuális)
+                    if (tömb[0,j] == aktuális)
                         aktid = j;
                 }    
             }
