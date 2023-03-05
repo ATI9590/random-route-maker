@@ -1,0 +1,6 @@
+# vscode editor folder
+.vscode
+
+# dotnet folders
+bin
+obj

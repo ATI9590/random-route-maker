@@ -1,0 +1,2 @@
+# minden source fájl \n sorvégű legyen
+source/*.txt text eol=lf
