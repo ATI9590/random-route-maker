@@ -4,7 +4,15 @@ namespace Random_Route_new
 	{
 		static void Main(string[] args)
 		{
-			string be = File.ReadAllText("source/HU road.txt");
+			Console.WriteLine("1: HU road");
+			Console.Write("Source file sorszáma: ");
+			int file = Convert.ToInt32(Console.ReadLine());
+			switch (file):
+			{
+				case 1:
+				string[] be = File.ReadAllLines("source/HU road.txt");
+				break;
+			}
 			string[] be2 = be.Split("\n\n");
 			string[,] tömb = new string[be2.Length, 101 * be2.Length];
 			for (int i = 0; i < be2.Length; i++)
