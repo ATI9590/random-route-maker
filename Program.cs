@@ -7,11 +7,19 @@ namespace Random_Route_new
 			Console.WriteLine("1: HU road");
 			Console.Write("Source file sorszáma: ");
 			int file = Convert.ToInt32(Console.ReadLine());
-			switch (file):
+			string be;
+			switch (file)
 			{
 				case 1:
-				string[] be = File.ReadAllLines("source/HU road.txt");
+				be = File.ReadAllText("source/HU road.txt");
 				break;
+				default:
+				be = null;
+				break;
+			}
+			if (be == null)
+			{
+				Console.WriteLine("Érvénytelen sorszám!");
 			}
 			string[] be2 = be.Split("\n\n");
 			string[,] tömb = new string[be2.Length, 101 * be2.Length];
